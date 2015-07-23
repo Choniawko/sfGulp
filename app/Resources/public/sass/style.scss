@@ -1,0 +1,40 @@
+$text-color: #BE4E32;
+$bg-color: #0B3C5F;
+$base-font: 'Arial', sans-serif;
+
+
+@mixin create-colors {
+	@for $i from 1 through 10 {
+		.block-#{$i} {
+			background: lighten($bg-color, $i);
+		}
+	}
+}
+
+body {
+	font-family: $base-font;
+	padding: 0 50px;
+	color: $text-color;
+	@include create-colors;
+}
+
+h1, h2 {
+	font-weight: 400;
+}
+
+p {
+	a {
+		color: lighten($text-color,45%);
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline
+		}
+	}
+}
+
+
+div {
+	width: 100%;
+	height: 20px;
+	background: $bg-color;
+}
