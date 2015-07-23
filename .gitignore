@@ -10,5 +10,3 @@
 /composer.lock
 /vendor/
 /web/bundles/
-/web/css/
-/node_modules
